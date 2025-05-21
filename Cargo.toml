@@ -1,0 +1,15 @@
+[package]
+name = "browser_engine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wgpu = "0.13.1"
+winit = "0.27.2"
+pollster = "0.2"
+bytemuck = { version = "1.12.1", features = ["derive"] }
+
+
+[[bin]]
+name = "main"
+path = "bin/main.rs"
