@@ -2,7 +2,6 @@
 
 This project is a simplified browser engine implemented in Rust. It parses HTML and CSS, builds a styled representation of the document, computes layout information, and renders display commands using GPU acceleration via `wgpu`.
 
----
 
 ## 📌 Features Implemented
 
@@ -13,7 +12,6 @@ A custom HTML parser reads and constructs a **DOM-like node tree** from HTML sou
 - Nesting and hierarchy are preserved.
 - Tree structures are printed in a readable format for debugging.
 
----
 
 ### 2. Parsing CSS  
 A CSS parser reads and interprets CSS rules:
@@ -22,7 +20,6 @@ A CSS parser reads and interprets CSS rules:
 - Stylesheets are represented as collections of rules.
 - Debug print functionality displays the parsed stylesheet.
 
----
 
 ### 3. Building a Style Tree  
 Combines the parsed HTML node tree with the parsed CSS rules to create a **Style Tree**:
@@ -31,7 +28,6 @@ Combines the parsed HTML node tree with the parsed CSS rules to create a **Style
 - Cascading and inheritance are applied where applicable.
 - Pretty print available for visualization.
 
----
 
 ### 4. Computing Layout  
 A layout system computes positions and dimensions for styled elements:
@@ -41,7 +37,6 @@ A layout system computes positions and dimensions for styled elements:
 - Viewport dimensions are considered during layout calculation.
 - Layout tree can be pretty-printed for inspection.
 
----
 
 ### 5. Building Display Commands  
 The layout tree is traversed to produce a list of **Display Commands**:
@@ -49,7 +44,6 @@ The layout tree is traversed to produce a list of **Display Commands**:
 - Commands include instructions for drawing rectangles with specific colors.
 - These commands act as the rendering instructions for the GPU renderer.
 
----
 
 ### 6. Rendering Display Commands  
 The display commands are passed into a `render::render_loop()` function which:
@@ -58,7 +52,6 @@ The display commands are passed into a `render::render_loop()` function which:
 - Converts display commands into GPU draw calls.
 - Renders solid-colored rectangles to the screen.
 
----
 
 ## 📦 Crates Used
 
@@ -66,7 +59,6 @@ The display commands are passed into a `render::render_loop()` function which:
 - `winit` — Window creation and event handling.
 - `pollster` — Simple async executor for wgpu setup.
 
----
 
 ## 📝 How to Run
 
